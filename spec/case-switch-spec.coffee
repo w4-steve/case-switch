@@ -58,5 +58,5 @@ describe "CaseSwitch", ->
         # Now we can test for view visibility
         caseSwitchElement = workspaceElement.querySelector('.case-switch')
         expect(caseSwitchElement).toBeVisible()
-        atom.commands.dispatch workspaceElement, 'toggle-sanke-camel:toggle'
+        atom.commands.dispatch workspaceElement, 'toggle-snake-camel:toggle'
         expect(caseSwitchElement).not.toBeVisible()
