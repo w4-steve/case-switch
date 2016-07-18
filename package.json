@@ -1,7 +1,7 @@
 {
   "name": "toggle-snake-camel",
   "main": "./lib/case-switch",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Atom editor package to change variable names from snake- to camelCase. Forked from andersennl/case-switch",
   "repository": "https://github.com/w4-steve/case-switch",
   "activationCommands": {},
