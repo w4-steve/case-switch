@@ -1,9 +1,9 @@
 {
-  "name": "case-switch",
+  "name": "toggle-snake-camel",
   "main": "./lib/case-switch",
-  "version": "2.2.2",
-  "description": "Atom editor package to change variable names from hyphen- to snake- to camelCase.",
-  "repository": "https://github.com/andersennl/case-switch",
+  "version": "0.0.0",
+  "description": "Atom editor package to change variable names from snake- to camelCase. Forked from andersennl/case-switch",
+  "repository": "https://github.com/w4-steve/case-switch",
   "activationCommands": {},
   "license": "MIT",
   "engines": {

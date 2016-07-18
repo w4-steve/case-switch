@@ -12,7 +12,7 @@ class Selector
       else if @isSnakeCase(selection)
         @snakeToCamel(selection)
       else if @isCamelCase(selection)
-        @camelToHyphen(selection)
+        @camelToSnake(selection)
 
   convertToCamel: ->
     for selection in @editor.getSelections()
@@ -27,13 +27,6 @@ class Selector
         @hyphenToSnake(selection)
       if @isCamelCase(selection)
         @camelToSnake(selection)
-
-  convertToHyphen: ->
-    for selection in @editor.getSelections()
-      if @isSnakeCase(selection)
-        @snakeToHyphen(selection)
-      if @isCamelCase(selection)
-        @camelToHyphen(selection)
 
   isHyphenCase: (selection) ->
     selection.getText().indexOf('-') > -1
@@ -54,10 +47,6 @@ class Selector
 
     selection.insertText(string, select: true)
 
-  snakeToHyphen: (selection) ->
-    text = selection.getText()
-    selection.insertText(text.replace(/([a-zA-Z0-9])(_)([a-zA-Z0-9])/g, "$1-$3"), select: true)
-
   hyphenToSnake: (selection) ->
     text = selection.getText()
     selection.insertText(text.replace(/([a-zA-Z0-9])(-)([a-zA-Z0-9])/g, "$1_$3"), select: true)
@@ -67,11 +56,6 @@ class Selector
     string = string.replace /(?:-)([a-z])/g, (v) ->
       v.toUpperCase()
     selection.insertText(string.replace(/-/g, ""), select: true)
-
-  camelToHyphen: (selection) ->
-    string = selection.getText()
-    string = string.replace /([a-z0-9])([A-Z])/g, "$1-$2"
-    selection.insertText(string.toLowerCase(), select: true)
 
   camelToSnake: (selection) ->
     string = selection.getText()
