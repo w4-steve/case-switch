@@ -2,31 +2,27 @@
 'context-menu':
   'atom-text-editor': [
     {
-      'label': 'Toggle case-switch'
-      'command': 'case-switch:toggle'
+      'label': 'Toggle snake-camel'
+      'command': 'toggle-snake-camel:toggle'
     }
   ]
 'menu': [
   {
     'label': 'Packages'
     'submenu': [
-      'label': 'Case Switch'
+      'label': 'Toggle snake-camel'
       'submenu': [
         {
           'label': 'Toggle'
-          'command': 'case-switch:toggle'
+          'command': 'toggle-snake-camel:toggle'
         },
         {
           'label': 'Convert to CamelCase'
-          'command': 'case-switch:convert-to-camel-case'
+          'command': 'toggle-snake-camel:convert-to-camel-case'
         },
         {
           'label': 'Convert to snake_case'
-          'command': 'case-switch:convert-to-snake-case'
-        },
-        {
-          'label': 'Convert to hyphen-case'
-          'command': 'case-switch:convert-to-hyphen-case'
+          'command': 'toggle-snake-camel:convert-to-snake-case'
         }
       ]
     ]
